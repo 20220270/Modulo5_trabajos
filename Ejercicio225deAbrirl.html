@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Ejericio de clase</title>
+</head>
+
+<body>
+
+    <h1 class="text-center">Reduce y filter</h1>
+    <h5 class="text-center">Abre la consola para ver los resultados :D</h5>
+
+    <script>
+
+        //Utilizaremos el metodo reduce para realizar una suma y nos devuelve el total
+
+        const numeros = [1, 2, 3, 4, 5];
+        const sumaTotal = numeros.reduce((total, numero) => {
+            return total + numero;
+        }, 0);
+        console.log("Suma total: ", sumaTotal);
+
+
+        //Utilizaremos el metodo filter para encontrar a las personas menores de 4 años
+        let gente = [
+            { nombre: "aaron", edad: 65 },
+            { nombre: "beth", edad: 2 },
+            { nombre: "cara", edad: 13 },
+            { nombre: "daniel", edad: 3 },
+            { nombre: "ella", edad: 25 },
+            { nombre: "fin", edad: 1 },
+            { nombre: "george", edad: 43 },
+        ]
+
+        let pequeños = gente.filter(persona => persona.edad <= 3) //aquí especificamos la condición del filtro
+
+        console.log(pequeños);
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
