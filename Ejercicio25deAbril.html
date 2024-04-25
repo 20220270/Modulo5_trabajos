@@ -14,6 +14,7 @@
 
     <h1 class="text-center mb-5">Mis artistas favoritos</h1>
 
+    <!--Le agregué clases de bootstrap para centrar la posición del contenedor-->
     <div class="container col-lg-6 col-md-6 col-sm-12 col-12" id="contendorPersonas">
 
     </div>
@@ -33,18 +34,17 @@
         { nombre: 'JD Pantoja', ocupacion: 'Cantante y creador de contenido' },
         { nombre: 'Orlando Flores', ocupacion: 'Pastor' },]
 
-        //Mostramos los datos en la pagina
+        //Mostramos los datos en la página mediante una función
 
-        
         const mostrarPersonas = ()=>{
             const loquesevera = document.getElementById('contendorPersonas');
 
             //usaremos Map
-            misPersonasFav.map(persona=>{ //debemos utilizar el simbolo += para que nos muestre todos los datos del arreglo, ya que
-                //con el simbolo =, solamente nos mostrará el ultimo elemento
+            misPersonasFav.map(persona=>{ //debemos utilizar el símbolo += para que nos muestre todos los datos del arreglo, ya que
+                //con el símbolo =, solamente nos mostrará el último elemento
                 loquesevera.innerHTML += ` 
                 
-                <p class="card text-center">
+                <p class="card text-center mt-5 fs-3">
                     nombre : ${persona.nombre} <br>
                     ocupacion : ${persona.ocupacion}
                     </p>

@@ -1,0 +1,8 @@
+body{
+    background-color: #008801;
+}
+
+.card{
+    border: 4px dashed #000; /*Dashes agregado para que los bordes no sean solidos*/
+    color: #777171;
+}
