@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo2.css">
+    <title>Ejercicio de clase</title>
+</head>
+<body>
+    
+
+    <h1 class="text-center">API</h1>
+    <h3 class="text-center">Ejercicio utilizando una API</h3>
+
+
+    <div class="container">
+
+        <div class="alert alert-primary" role="alert" id="contenido">
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let url = "https://api.chucknorris.io/jokes/random";
+
+        const funcion = async() => {
+            const respuesta = await fetch(url);
+
+            const resultado = await respuesta.json();
+
+            let contenidoM = document.getElementById('contenido');
+
+            let primerT = document.createElement('p');
+            let SegundoT = document.createElement('p');
+            let imagen = document.createElement('img');
+
+            primerT.innerText = resultado.value;
+            imagen.src = resultado.icon_url;
+            imagen.alt = resultado.icon_url;
+
+            contenidoM.innerHTML = `
+            <p>
+
+                ${resultado.value}
+
+                <br>
+                URL : ${resultado.icon_url}
+
+                </p>
+            `;
+        }
+
+        funcion()
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>
